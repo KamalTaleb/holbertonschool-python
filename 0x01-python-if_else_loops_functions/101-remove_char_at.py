@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
-    strtm = ""
+    st = ""
     cont = 0
     for c in str:
         if cont == n:
             pass
         else:
-            strtm += c
+            st += c
         cont += 1
-    return strtm
+    return st
