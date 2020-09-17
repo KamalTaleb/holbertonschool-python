@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""kamal"""
+
+
 class Square():
     """class square.
     Attributes:
