@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""kamal"""
+
+
 import math
 
 
 class MagicClass:
+    """kamal"""
     def __init__(self, radius=0):
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
