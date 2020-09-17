@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""kamal"""
+
+
 class Square:
+    """kamal"""
     def __init__(self, size=0):
         self.__size = size
 
