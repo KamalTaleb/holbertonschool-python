@@ -1,19 +1,9 @@
 #!/usr/bin/python3
-
-"""
-function 0-add_integer
-adds two integers
-module "0-add_integer"
-"""
+"""kamal"""
 
 
 def add_integer(a, b=98):
-    """adds two numbers
-    >>> add_integer(4, 3)
-    7
-    >>> add_integer(5, 5)
-    10
-    """
+    """kamal"""
     fnum = 0
     if type(a) is int or type(a) is float:
         fnum += int(a)
