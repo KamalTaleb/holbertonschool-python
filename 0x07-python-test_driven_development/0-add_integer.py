@@ -1,16 +1,25 @@
 #!/usr/bin/python3
-"""kamal"""
+"""
+    0_add_integer.py
+    This function adds two numbers
+    return a + b
+"""
 
 
 def add_integer(a, b=98):
-    """kamal"""
-    fnum = 0
-    if type(a) is int or type(a) is float:
-        fnum += int(a)
-    else:
+
+    """ Function that adds 2 integers
+        return a + b
+    """
+
+    if not (isinstance(a, int) or isinstance(a, float)):
         raise TypeError("a must be an integer")
-    if type(b) is int or type(b) is float:
-        fnum += int(b)
-    else:
+    if not (isinstance(b, int) or isinstance(b, float)):
         raise TypeError("b must be an integer")
-    return fnum
+
+    if isinstance(a, float):
+        a = int(a)
+    if isinstance(a, float):
+        b = int(b)
+
+    return a + b
