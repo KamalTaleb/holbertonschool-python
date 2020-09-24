@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""
-module "0-rectangle"
-"""
+"""kamal"""
 
 
 class Rectangle:
+    """kamal"""
     pass
