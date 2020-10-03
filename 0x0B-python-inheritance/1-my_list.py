@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-""" my list """
+"""my list"""
 
 
 class MyList(list):
-    """
-    "1-my_list"
-    """
+    """Class MyList that inherits from list"""
     def print_sorted(self):
-        """
-        print_sorted
-        """
-        tmp_list = self.copy()
-        tmp_list.sort()
-        print(tmp_list)
+        """Prints the list"""
+        print(sorted(self))
