@@ -2,7 +2,6 @@
 """student to disk and reload"""
 
 
-
 class Student:
     """
     class student
