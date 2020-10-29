@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""
-    nqueens.py
-"""
+"""nqueens.py"""
+
+
 import sys
 
 
 def n_queen(temp_store, store, column, i, n):
-    
+    """kamal"""
     if (i > n):
         store.append(temp_store[:])
         return store
