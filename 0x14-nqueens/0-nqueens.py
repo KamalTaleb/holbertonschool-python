@@ -14,14 +14,14 @@ def n_queen(temp_store, store, column, i, n):
     for j in range(n + 1):
         if i == 0 or ([i - 1, j - 1] not in temp_store and
                       [i - 1, j + 1] not in temp_store and
-                      j not in col):
+                      j not in column):
             if i > 1:
                 t = 0
                 for k in range(2, i + 1):
                     if ([i - k, j - k] in temp_store) or ([i - k, j + k] in temp_store):
                         t = 1
                         break
-                if dia:
+                if t:
                     continue
             temp_store.append([i, j])
             column.append(j)
