@@ -24,7 +24,8 @@ def count_words(subreddit, word_list, hot_list=[], init=0, after="null"):
                 num = len(
                     list(
                         filter(
-                            lambda hot_w: hot_w.lower() == word.lower(), hot_words)))
+                            lambda hot_w: hot_w.lower() == word.lower(),
+                            hot_words)))
                 if num != 0:
                     reddit.append([word, num])
             if len(reddit) != 0:
