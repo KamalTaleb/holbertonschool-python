@@ -3,6 +3,7 @@
 from operator import itemgetter
 import requests
 
+
 def count_words(subreddit, word_list, hot_list=[], init=0, after="null"):
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     agt = {"User-Agent": "linux:1:v2.1 (by /u/heimer_r)"}
