@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Count it!"""
+""" 0-count.py """
 from operator import itemgetter
 import requests
 
@@ -19,7 +19,7 @@ def count_words(subreddit, word_list, hot_list=[], init=0, after="null"):
             hot_str = " ".join(hot_list)
             hot_words = hot_str.split(" ")
             word_list_low = sorted(word_list)
-            reddit = []
+            rt = []
             for word in word_list_low:
                 num = len(
                     list(
@@ -27,17 +27,17 @@ def count_words(subreddit, word_list, hot_list=[], init=0, after="null"):
                             lambda hot_w: hot_w.lower() == word.lower(),
                             hot_words)))
                 if num != 0:
-                    reddit.append([word, num])
-            if len(reddit) != 0:
+                    rt.append([word, num])
+            if len(rt) != 0:
                 i = 0
-                while i < len(reddit) - 1:
-                    if reddit[i + 1][0] is not None and reddit[i][0] == reddit[i + 1][0]:
-                        reddit[i][1] += reddit[i + 1][1]
-                        reddit.pop(i + 1)
-                        reddit.append([None, None])
+                while i < len(rt) - 1:
+                    if rt[i + 1][0] is not None and rt[i][0] == rt[i + 1][0]:
+                        rt[i][1] += rt[i + 1][1]
+                        rt.pop(i + 1)
+                        rt.append([None, None])
                         i -= 1
                     i += 1
-                r = list(filter(lambda x: x != [None, None], reddit))
-                reddit_sorted = sorted(r, key=lambda x: (x[1]), reverse=True)
-                for i in reddit_sorted:
+                r = list(filter(lambda x: x != [None, None], rt))
+                r_sorted = sorted(r, key=lambda x: (x[1]), reverse=True)
+                for i in r_sorted:
                     print(*i, sep=": ")
