@@ -12,14 +12,14 @@ class LRUCache(BaseCaching):
         self.connect(self.head, self.tail)
 
     def put(self, key, item):
-        """ Add an item"""
+        """Add an item"""
         if key and item:
             if key in self.cache_data:
                 self._remove(key)
             self._add(key, item)
 
     def _remove(self, key):
-        """ Remove an item"""
+        """Remove an item"""
         self.connect(self.prev[key], self.next[key])
         del self.prev[key], self.next[key], self.cache_data[key]
 
@@ -37,7 +37,7 @@ class LRUCache(BaseCaching):
             self._remove(self.next[self.head])
 
     def get(self, key):
-        """ Get an item"""
+        """Get an item"""
         if key is None or self.cache_data.get(key) is None:
             return None
         if key in self.cache_data:
